@@ -1,0 +1,207 @@
+body {
+  overflow: auto;
+}
+
+.table {
+  width: 100%;
+  padding: 0em;
+}
+
+#table-header p {
+  color: var(--color-fg);
+}
+
+.table p {
+  position: relative;
+  left: 0;
+  font-size: 14px;
+  letter-spacing: -0.2px;
+  color: rgb(255, 255, 255);
+  transition: all 0.3s;
+  opacity: 0.4;
+
+}
+
+.t-row {
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.t-row.not-hovered {
+  opacity: 0.5;
+  filter: blur(5px);
+}
+
+.index {
+  flex: 0.2;
+  opacity: 0.4;
+}
+
+.title {
+  flex: 2;
+}
+
+.title-event {
+  flex: 5.1;
+}
+
+
+.category {
+  flex: 3;
+}
+
+.time {
+  flex: 4;
+}
+
+.year {
+  flex: 1;
+  text-align: right;
+  opacity: 50%;
+}
+
+.when {
+  flex: 1.02;
+  text-align: right;
+  opacity: 50%;
+
+}
+
+.table .t-row:not(#table-header):hover .index p,
+.table .t-row:not(#table-header):hover .title p,
+.table .t-row:not(#table-header):hover .category p,
+.table .t-row:not(#table-header):hover .time p {
+  color: #474747;
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .index {
+    flex: 1;
+  }
+
+  .time {
+    flex: 2;
+  }
+}
+
+.overview-page {
+  width: 100vw;
+}
+
+.table {
+  width: 100%;
+  padding: 0em;
+}
+
+#table-header p {
+  color: var(--color-fg);
+}
+
+.table p {
+  position: relative;
+  left: 0;
+  font-size: 11px;
+  letter-spacing: -0.5px;
+  color: rgb(255, 255, 255);
+  transition: all 0.3s;
+}
+
+.t-row {
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.t-row.not-hovered {
+  opacity: 0.5;
+  filter: blur(5px);
+}
+
+.index {
+  flex: 0.2;
+}
+
+.title {
+  flex: 2;
+}
+
+.category {
+  flex: 3;
+}
+
+.time {
+  flex: 4;
+}
+
+.role,
+.where {
+  flex: 2.05;
+  /* O modifica questo valore in base alla larghezza desiderata */
+}
+
+.year {
+  flex: 1;
+  text-align: right;
+  opacity: 50%;
+}
+
+.table .t-row:not(#table-header):hover .index p,
+.table .t-row:not(#table-header):hover .title p,
+.table .t-row:not(#table-header):hover .category p,
+.table .t-row:not(#table-header):hover .time p {
+  color: #fff;
+  border-bottom: 0.2px solid rgba(225, 225, 225, 0.896);
+
+}
+
+@media (max-width: 900px) {
+  .index {
+    flex: 1;
+  }
+
+  .time {
+    flex: 2;
+  }
+}
+
+.overview-page {
+  width: 100vw;
+}
+
+
+#table-header {
+  border-top: 0.2px solid white;
+  opacity: 50%;
+}
+
+#table-header .t-row {
+  position: relative;
+}
+
+#table-header .t-row::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom: 0.2px solid white;
+  z-index: 1;
+}
+
+
+#table-header .t-row>div::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-image: radial-gradient(circle, black 20%, transparent 20%);
+  background-size: 10px 10px;
+}

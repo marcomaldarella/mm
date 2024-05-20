@@ -1,0 +1,31 @@
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 1em;
+  bottom: 1px;
+  position: absolute;
+  color: white;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1em;
+  color: white;
+  mix-blend-mode: difference;
+}
+
+.footer-item p {
+  color: white;
+  mix-blend-mode: difference;
+}
+
+@media (max-width: 900px) {
+  .footer {
+    padding: 0.5em;
+    bottom: 1px;
+    position: absolute;
+    color: white;
+  }
+}
